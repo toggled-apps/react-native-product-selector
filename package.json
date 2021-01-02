@@ -1,0 +1,49 @@
+{
+  "name": "@toggled-apps/react-native-product-selector",
+  "version": "1.0.0",
+  "description": "This react native module is intended to provide a beautifully animated product selector with an expandable description which you can customise and use in your own projects.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/toggled-apps/react-native-product-selector.git"
+  },
+  "keywords": [
+    "carousel",
+    "App",
+    "ios",
+    "android",
+    "react-component",
+    "react-native",
+    "slider",
+    "product"
+  ],
+  "author": "Toggled Apps",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/toggled-apps/react-native-product-selector/issues"
+  },
+  "homepage": "https://github.com/toggled-apps/react-native-product-selector",
+  "peerDependencies": {
+    "react": "17.0.1",
+    "react-native": "0.63.4"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.19",
+    "@types/react": "^17.0.0",
+    "@types/react-native": "^0.63.40",
+    "@types/react-test-renderer": "^17.0.0",
+    "metro-react-native-babel-preset": "^0.64.0",
+    "typescript": "^4.1.3"
+  },
+  "dependencies": {
+    "@gorhom/bottom-sheet": "^3.0.1",
+    "react-native-gesture-handler": "~1.8.0",
+    "react-native-reanimated": "2.0.0-rc.0"
+  },
+  "directories": {
+    "example": "examples"
+  }
+}
