@@ -37,13 +37,13 @@ interface Props {
 }
 
 const ProductSelector = ({
-  content,
+  content = null,
   data,
-  colors,
+  colors = [],
   onAddToCart,
-  sizes,
-  subtitle,
-  title,
+  sizes = [],
+  subtitle = "",
+  title = "",
 }: Props) => {
   const scrollX = React.useRef(new Animated.Value(0)).current;
   const [sizeIndex, setSizeIndex] = React.useState<number>(0);

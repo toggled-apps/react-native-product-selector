@@ -7,13 +7,58 @@ This react native module is intended to provide a beautifully animated product s
 ## Usage
 
 ```
+yarn add @toggled-apps/react-native-product-selector
+or
+npm install @toggled-apps/react-native-product-selector
 ```
 
 ### Example Usage
 ```javascript
+import React from "react";
+import RNProductSelector from "@toggled-apps/react-native-product-selector";
+
+const data = [ ... ];
+const colors = [... ];
+const sizes = [ ... ];
+
+const content = (
+  <View> ... </View>
+);
+
+
+export default function App() {
+  return (
+    <RNProductSelector
+      content={content}
+      colors={colors}
+      data={data}
+      onAddToCart={({
+        colorIndex,
+        sizeIndex,
+      }: {
+        colorIndex: number;
+        sizeIndex: number;
+      }) => {
+        console.log(`color: ${colors[colorIndex]}, size: ${sizes[sizeIndex]}`);
+      }}
+      sizes={sizes}
+      subtitle={"Subtitle"}
+      title={"Title"}
+    />
+  );
+}
 ```
 
 ## Props
+|Name|Type|Required|Default|Description|
+|---|---|---|---|---|
+|colors|array|Optional|[]|An array of colors to be selected|
+|content|any|Optional|null|Component to be rendered in the product description.|
+|data|array|Required|None|An an array of urls of images for your carousel.|
+|onAddToCart|function|Required|None| Function which returns the color index and the size index. ({ colorIndex, sizeIndex }: { colorIndex: number; sizeIndex: number; }) => void;|
+|sizes|array|Optional|[]|Any array of strings of sizes for your products|
+|subtitle|string|Optional|""|Description string.|
+|title|string|Optional|""|Title string.|
 
 ## 🚀 Run the example
 The provided example uses [expo](https://expo.io/).
