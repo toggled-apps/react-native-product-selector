@@ -3,12 +3,13 @@ import { StyleSheet, Text, View } from "react-native";
 import { TouchableWithoutFeedback } from "@gorhom/bottom-sheet"; // Pressables/ touchables don't work on android https://gorhom.github.io/react-native-bottom-sheet/troubleshooting
 
 interface Props {
-  sizes: string[];
   sizeIndex: any;
+  sizeIndicatorColor: string;
+  sizes: string[];
   onPress: (i: number) => void;
 }
 
-const Item = ({ sizes, sizeIndex, onPress }: Props) => {
+const Item = ({ sizes, sizeIndicatorColor, sizeIndex, onPress }: Props) => {
   return (
     <View>
       <Text style={{ fontSize: 14, marginBottom: 12, fontWeight: "bold" }}>
@@ -24,7 +25,7 @@ const Item = ({ sizes, sizeIndex, onPress }: Props) => {
               <View
                 style={[
                   styles.size,
-                  { backgroundColor: sizeIndex !== i ? "white" : "#F8D9E0" },
+                  { backgroundColor: sizeIndex !== i ? "white" : sizeIndicatorColor },
                 ]}
               >
                 <Text>{size}</Text>

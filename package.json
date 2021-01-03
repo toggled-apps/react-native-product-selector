@@ -1,6 +1,6 @@
 {
   "name": "@toggled-apps/react-native-product-selector",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "This react native module is intended to provide a beautifully animated product selector with an expandable description which you can customise and use in your own projects.",
   "main": "index.js",
   "scripts": {

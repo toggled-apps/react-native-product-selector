@@ -56,6 +56,7 @@ export default function App() {
 |content|any|Optional|null|Component to be rendered in the product description.|
 |data|array|Required|None|An an array of urls of images for your carousel.|
 |onAddToCart|function|Required|None| Function which returns the color index and the size index. ({ colorIndex, sizeIndex }: { colorIndex: number; sizeIndex: number; }) => void;|
+|sizeIndicatorColor|string|Optional|"#F8D9E0"|Hex color which shows the user what size is selected|
 |sizes|array|Optional|[]|Any array of strings of sizes for your products|
 |subtitle|string|Optional|""|Description string.|
 |title|string|Optional|""|Title string.|

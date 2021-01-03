@@ -31,6 +31,7 @@ interface Props {
     colorIndex: number;
     sizeIndex: number;
   }) => void;
+  sizeIndicatorColor: string;
   sizes: string[];
   subtitle: string;
   title: string;
@@ -41,6 +42,7 @@ const ProductSelector = ({
   data,
   colors = [],
   onAddToCart,
+  sizeIndicatorColor = "#F8D9E0",
   sizes = [],
   subtitle = "",
   title = "",
@@ -102,6 +104,7 @@ const ProductSelector = ({
                 {subtitle}
               </Text>
               <SizePicker
+                sizeIndicatorColor={sizeIndicatorColor}
                 sizes={sizes}
                 sizeIndex={sizeIndex}
                 onPress={(i) => setSizeIndex(i)}
@@ -117,7 +120,7 @@ const ProductSelector = ({
           </View>
           <View style={{ alignItems: "center", marginBottom: 46 }}>
             <Pressable
-              onPress={() => onAddToCart({colorIndex, sizeIndex})}
+              onPress={() => onAddToCart({ colorIndex, sizeIndex })}
               style={styles.button}
             >
               <Text style={{ color: "white", fontSize: 16 }}>Add to Cart</Text>
